@@ -63,7 +63,7 @@ I began by removing columns that are not relevant to the analysis. These columns
 or
 * did not contain sufficient data to be meaningful in the analysis (for example, report status)
 
-A full list of columns removed can be found in the [Jupyter Notebook](./Phase_1_Project.ipynb)
+A full list of columns removed can be found in the [Jupyter Notebook](./Phase_1_Project.ipynb).
 
 I also removed entries that did not have sufficient data. Some of these entires were missing all information entirely. Others were missing all of the information about passenger outcomes, which made them irrelevant to the analysis.
 
@@ -149,9 +149,27 @@ Therefore, in order to prioritize passenger safety, the business should:
 
 * **Provide pilots with additional training in the phases of flight that are most dangerous to passengers: cruise, maneuvering, and takeoff.** Nearly two-thirds of all fatal accidents occur during these phases.
 
-Additional vizualizations summarizing these results can be found in the [Interactive Dashboard](https://public.tableau.com/app/profile/caroline.surratt/viz/Phase1Project-Dashboard/AirplaneAccidentsfrom1982-2022)
+
+## Additional Resources
+
+The full analysis can be viewed in the [Jupyter Notebook](./Phase_1_Project.ipynb). This repository also contains a [presentation](./presentation.pdf) of the findings.
+
+Additional vizualizations summarizing these results can be found in the [Interactive Dashboard](https://public.tableau.com/app/profile/caroline.surratt/viz/Phase1Project-Dashboard/AirplaneAccidentsfrom1982-2022).
 
 A preview of this dashboard is displayed below.
 
 ![img](./images/Dashboard.jpg)
+
+
+For additional information, contact Caroline Surratt via [email](mailto:carolinecsurratt@gmail.com).
+
+## Repository Structure
+
+```
+├── data
+├── images
+├── README.md
+├── Phase_1_Project.ipynb
+└── presentation.pdf
+```
  
