@@ -48,7 +48,7 @@ Entries include:
 
 ## Data Understanding
 
-This dataset only contains information about aviation accidents - not all flights. Therefore, risk cannot be assessed by looking simply at the number of passengers in accidents or by evaluating which plane types, weather conditions, etc. have the highest numbers of accidents. Instead, the number of passengers injured (including fatal injuries, serious injuries, and minor injuries) will be compared to the number of passengers injured. These injury categories will be compared across several features:
+This dataset only contains information about aviation accidents - not all flights. Therefore, risk cannot be assessed by looking simply at the number of passengers in accidents or by evaluating which plane types, weather conditions, etc. have the highest numbers of accidents. Instead, the number of passengers injured (including fatal injuries, serious injuries, and minor injuries) will be compared to the number of passengers uninjured. These injury categories will be compared across several features:
 
 * Plane make and model
 * Weather conditions
@@ -59,12 +59,13 @@ This dataset only contains information about aviation accidents - not all flight
 
 I began by removing columns that are not relevant to the analysis. These columns either:
 * contained information that was not relevant to risk (for example, publication date)
+
 or
 * did not contain sufficient data to be meaningful in the analysis (for example, report status)
 
-A full list of columns removed can be found in the [Jupyter Notebook](./Phase 1 Project.ipynb)
+A full list of columns removed can be found in the [Jupyter Notebook](./Phase_1_Project.ipynb)
 
-I also removed entries that did not have sufficient data. Some of these entires were missing all information entirely. Others were missing all of the information about passenger outcomes, which made the irrelevant to the analysis.
+I also removed entries that did not have sufficient data. Some of these entires were missing all information entirely. Others were missing all of the information about passenger outcomes, which made them irrelevant to the analysis.
 
 Finally, I converted the data within columns to usable datatypes. I converted dates to datetime objects, made strings all uppercase, and filled missing string values with "UNKNOWN". 
 
@@ -79,11 +80,11 @@ Before comparing injury percentages by plane type, I eliminated entries that had
 
 Then, in order to improve the strength of my recommendation, I only considered plane make and models for which there was data for at least 10 accidents and at least 50 passengers.
 
-Applying these constraints and grouping the data this way allowed me to create a subset of the 10 planes with the highest percentages of passengers uninjured:
+Applying these constraints and grouping the data this way allowed me to create a subset of the 10 planes with the lowest percentages of passengers injured:
 
 ![img](./images/Percent_Injured_by_Make_and_Model.jpg)
 
-The airplane with the smallest percentage of passengers in any injury category is the **Boeing 737-3H4**, with 99.73% of passengers uninjured. In addition to having the lowest percent of passengers injured, this airplane also has no recorded fatal injuries. There is one plane in this subset that has a smaller percentage of serious injuries (the Airbus Industrie A320-232). However, it is only a fraction of a percent smaller, and it has a much larger percent of minor injuries, resulting in a larger percentage of passengers injured overall.
+The airplane with the smallest percentage of passengers injured is the **Boeing 737-3H4**, with 99.73% of passengers uninjured. In addition to having the lowest percent of passengers injured, this airplane also has no recorded fatal injuries. There is one plane in this subset that has a smaller percentage of serious injuries (the Airbus Industrie A320-232). However, it is only a fraction of a percent smaller, and it has a much larger percent of minor injuries, resulting in a larger percentage of passengers injured overall.
 
 Therefore, **I recommend that the business utilize Boeing 737-3H4 airplanes for their enterprises, as these planes have the lowest percentage of passengers injured in accidents.**
 
@@ -130,7 +131,7 @@ The dataframe of passenger counts by injury category yielded the following resul
 
 ![img](./images/Total_Injured_by_Phase_of_Flight.jpg)
 
-As the chart above illustrates, the most injuries to passengers occur during the cruise, maneuvering, and takeoff phases of flight.  In fact, nearly two-thirds of all fatalities occurred during the cruise, maneuvering, and takeoff phases of flight.
+As the chart above illustrates, the most injuries to passengers occur during the cruise, maneuvering, and takeoff phases of flight.  In fact, nearly two-thirds of all fatalities occurred during the cruise, maneuvering, and takeoff phases.
 
 Therefore, my third and final recommendation to the business is to **provide pilots with additional training in the three phases of flight with the highest number of fatalities: the cruise, maneuvering, and takeoff phases.**
 
@@ -143,7 +144,7 @@ Therefore, in order to prioritize passenger safety, the business should:
 * **Operate Boeing 737-3H4 airplanes.** These airplanes have the lowest percentage of passengers injured.  _If operation of these airplanes is not possible (for example, due to number of passengers or cargo load), the business should operate an airplane from the provided subset of 10 planes with the lowest injury percentages._
 
 
-* **Fly only in weather conducive to Visible Meteorological Conditions.** Accidents in VMC are significantly less dangerous than accidents in IMC.
+* **Fly only in weather conducive to Visual Meteorological Conditions.** Accidents in VMC are significantly less dangerous than accidents in IMC.
 
 
 * **Provide pilots with additional training in the phases of flight that are most dangerous to passengers: cruise, maneuvering, and takeoff.** Nearly two-thirds of all fatal accidents occur during these phases.
