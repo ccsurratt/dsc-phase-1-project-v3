@@ -81,7 +81,7 @@ Then, in order to improve the strength of my recommendation, I only considered p
 
 Applying these constraints and grouping the data this way allowed me to create a subset of the 10 planes with the highest percentages of passengers uninjured:
 
-![img](./images/Percent Injured by Make and Model.png)
+![graph1](./images/Percent Injured by Make and Model.png)
 
 The airplane with the smallest percentage of passengers in any injury category is the **Boeing 737-3H4**, with 99.73% of passengers uninjured. In addition to having the lowest percent of passengers injured, this airplane also has no recorded fatal injuries. There is one plane in this subset that has a smaller percentage of serious injuries (the Airbus Industrie A320-232). However, it is only a fraction of a percent smaller, and it has a much larger percent of minor injuries, resulting in a larger percentage of passengers injured overall.
 
@@ -103,7 +103,7 @@ In weather classified as VMC, a pilot is able to use visual cues. In contrast, i
 
 The dataframe yielded these results:
 
-![img](./images/Percent Injured by Weather Condition.png)
+![graph2](./images/Percent Injured by Weather Condition.png)
 
 Two things are apparent from this bar chart:
 
@@ -128,7 +128,7 @@ However, the phase of flight is quite different, as there is not a degree of cho
 
 The dataframe of passenger counts by injury category yielded the following results:
 
-![img](./images/Total Injured by Phase of Flight.png)
+![graph3](./images/Total Injured by Phase of Flight.png)
 
 As the chart above illustrates, the most injuries to passengers occur during the cruise, maneuvering, and takeoff phases of flight.  In fact, nearly two-thirds of all fatalities occurred during the cruise, maneuvering, and takeoff phases of flight.
 
